@@ -20,6 +20,7 @@ public class HelloWorld extends AppCompatActivity {
     private GoogleApiClient client;
 
     Button btnSayHello;
+    Button btnSayGoodbye;
     TextView txtOutput;
 
 
@@ -30,6 +31,7 @@ public class HelloWorld extends AppCompatActivity {
 
         btnSayHello = (Button)findViewById(R.id.btnSayHello);
         txtOutput = (TextView)findViewById(R.id.txtOutput);
+        btnSayGoodbye = (Button)findViewById(R.id.btnSayGoodbye);
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -38,8 +40,9 @@ public class HelloWorld extends AppCompatActivity {
 
     public void sayHello(View vw)
     {
-        txtOutput.setText(R.string.strMessage);
+        txtOutput.setText("Salut l'ami");
     }
+    public void sayGoodbye(View vw){txtOutput.setText("Au revoir ami");}
 
     @Override
     public void onStart() {
